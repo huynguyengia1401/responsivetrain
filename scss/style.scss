@@ -130,12 +130,12 @@ body {
 
         img {
             width: 100%;
-            height: 300px;
+            height: 250px;
         }
     }
 
     h4 {
-        margin: 20px;
+        margin: 10px;
     }
 
     h4 i {
@@ -144,7 +144,7 @@ body {
     }
 
     p {
-        padding: 20px;
+        padding: 12px;
     }
 }
 
@@ -206,6 +206,7 @@ body {
 //meet the team 
 //Mobile
 .meet-the-team {
+    margin-top: 10px;
     text-align: center;
 
     .card-name {
@@ -252,5 +253,176 @@ body {
     label {
         color: white;
     }
+
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+  }
+
+.checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox .checkmark:after {
+    top: 4.5px;
+	left: 4.5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+  }  
+.text {
+    width: 100%;
+    margin: 5px;
+}
+.btn-send {
+    padding: 10px 20px;
+    border-color: red;
+    background-color: red;
+    font-size: 17px;
+    color:white;
+    margin: 5px;
+    font-style: bold;
+    width: auto;
+}
+
+//Tablet
+@media screen and (max-width: 1023px) and (min-width: 601px) {
+.info-work1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+
+    .content-info-work-3{
+        grid-column: 1/3;
+    }
+}
+.content-plans-built {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+
+    .content-service-5{
+        grid-column: 1/3;
+    } 
+    .content-service-6{
+        grid-column: 1/3;
+    }
+}
+.team{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+
+    .card-name{
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .card-name-3{
+        grid-column: 1/3;
+    }
+}
+.about-us{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+
+    .drop-us{
+        grid-column: 1/3;
+    }
+}
+}
+//desktop
+@media screen and (min-width: 1024px) {
+.work1{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+
+    .image-work1{
+
+        img{
+            padding-top: 2px;
+        }
+    }
+}
+
+.content-plans-built {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row: auto auto;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto auto;
+
+}
+
+.team{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto;
+
+    .card-name{
+        padding: 10px;
+        margin: 20px;
+    }
+
+}
+
+.about-us{
+    display: grid;
+    grid-template-columns: 400px auto auto;
+    grid-row: auto auto;
+
+}
 
 }
