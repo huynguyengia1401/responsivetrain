@@ -7,45 +7,63 @@ body {
   margin: 0;
   padding: 0; }
 
-.topnav {
-  overflow: hidden;
-  background-color: white; }
-  .topnav a {
-    float: right;
-    display: block;
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; }
+  nav .logo {
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 17px;
     color: black;
-    text-align: center;
-    padding: 10px 14px;
-    font-size: 15px;
-    text-decoration: none; }
-  .topnav .logo {
-    float: left; }
-  .topnav .btn-sign-up {
-    border: red solid 0.5px;
-    border-radius: 25px;
-    padding: 10px; }
-  .topnav .iconnav {
-    display: none; }
-
-.topnav a:hover {
-  color: red;
-  border-color: red;
-  border-bottom: solid;
-  border-width: 0.5px; }
-
-@media screen and (max-width: 600px) {
-  .topnav a {
-    display: none; }
-  .topnav .iconnav {
+    font-weight: bold; }
+  nav ul {
     float: right;
-    display: block; }
-  .responsive {
-    position: relative; }
-  .responsive a {
-    float: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden; }
+    nav ul li {
+      list-style: none;
+      padding: 10px; }
+      nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: black; }
+      nav ul li .btn-sign-up {
+        border: red solid 0.5px;
+        border-radius: 25px; }
+      nav ul li .iconnav i {
+        display: none; }
+      nav ul li .list {
+        padding: 7px; }
+      nav ul li a:hover {
+        color: red;
+        border-color: red;
+        border-bottom: solid;
+        border-width: 0.5px; }
+
+@media screen and (max-width: 1023px) {
+  nav .logo {
+    display: none; }
+  nav ul li .list {
+    display: none; }
+  nav ul li .iconnav i {
     display: block;
-    text-align: left; }
-  .responsive .iconnav {
+    padding: 7px; }
+  .responsive {
+    position: relative;
+    display: block; }
+  .responsive ul {
+    float: left;
+    display: inline; }
+  .responsive ul li .list {
+    display: block; }
+  .responsive ul li .iconnav i {
     position: absolute;
     right: 0;
     top: 0; } }
@@ -53,13 +71,16 @@ body {
 .introduce {
   margin-top: 10px;
   width: 100%;
-  height: 350px;
+  height: 400px;
   text-align: center;
   background-color: grey;
   color: white;
   overflow: hidden; }
   .introduce .content-introduce {
     margin-top: 70px; }
+    .introduce .content-introduce p {
+      padding: 20px 20px;
+      text-align: center; }
   .introduce .btn-demo {
     border: white solid 1px;
     padding: 10px 20px;
